@@ -1,12 +1,12 @@
 {
-  "name": "notes-node",
+  "name": "weather-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "weather-app",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Marcus Little",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "request": "^2.88.0",
