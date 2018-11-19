@@ -15,10 +15,12 @@ const geocodeAddress = (address, callback) => {
             });
         }
         else if (body.results[0].locations[0] !== undefined){
+            const location = body.results[0].locations[0]
+            const formattedAddress = `${location.street} ${location.adminArea5} ${location.adminArea3} ${location.postalCode} ${location.adminArea1}`
             callback(undefined, {
-                address:address,
-                latitude: body.results[0].locations[0].latLng.lat,
-                longitude: body.results[0].locations[0].latLng.lng
+                address:formattedAddress,
+                latitude: location.latLng.lat,
+                longitude: location.latLng.lng
             })
         }
         else {
