@@ -13,4 +13,14 @@ app.get('/', (req, res) => {
     })
 });
 
+app.get('/about', (req, res) => {
+    res.send('About Page')
+})
+
+app.get('/bad', (req, res) => {
+    res.send({
+        request: 'Bad one',
+        fix: 'I dont know'
+    })
+})
 app.listen(8000);
